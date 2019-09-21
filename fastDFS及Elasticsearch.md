@@ -145,7 +145,7 @@ tracker_server=自己ubuntu虚拟机的ip地址:22122
 4. 执行
 
    ```shell
-   sudo ./configure  --prefix=/usr/local/nginx/ --add-module=fastdfs-nginx-module-master的解压后的目录的绝对路径/src
+   sudo ./configure  --prefix=/usr/local/nginx/ --add-module=/home/itcast/fdfs/fastdfs-nginx-module-master/src
    ```
 
    注意：**这时候会报一个错，说没有PCRE库**
