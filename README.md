@@ -40,6 +40,7 @@
 2. [**数据库 - 02**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93_02/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
 3. [**数据库 - 03**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93_03/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
 4. [**数据库 - 04**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93_04/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
+5. [**MySQL讲义**]()
 
 ---
 ## Go 代码
