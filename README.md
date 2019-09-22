@@ -46,14 +46,14 @@
 
 ## Vim
 
-1. [**Vim**]()
+1. [**Vim**](https://github.com/shumintao/conf/blob/master/Vim_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
 
 
 ---
 
 ## Liunx
 
-1. [**Liunx**]()
+1. [**Liunx**](https://github.com/shumintao/conf/blob/master/Liunx_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
 
 ## Go 代码
 
