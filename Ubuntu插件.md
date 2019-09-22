@@ -43,3 +43,8 @@
 
 ## 安装wget 
 >sudo apt-get install wget
+
+
+## gcc安装
+> sudo apt-get  build-dep  gcc
+> gcc --version 
