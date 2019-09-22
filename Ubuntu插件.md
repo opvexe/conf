@@ -39,3 +39,7 @@
 
 ## 安装man手册
 >sudo apt-get install manpages-posix-dev
+
+
+## 安装wget 
+>sudo apt-get install wget
