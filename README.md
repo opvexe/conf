@@ -60,11 +60,16 @@
 ## Go 代码
 
 1. [**反射**](https://github.com/shumintao/conf/blob/master/反射_01/课堂笔记.md)
-2. [**简单排序**]()
+2. [**简单排序**](https://github.com/shumintao/conf/blob/master/%E6%8E%92%E5%BA%8F-01/src/mian.go)
 
 
 
 
 ---
+
+## Git 操作
+
+
+
 
 ## Mac 软件环境安装配置
