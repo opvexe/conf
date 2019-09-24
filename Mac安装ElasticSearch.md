@@ -27,8 +27,11 @@ Elasticsearch 启动后，也启动了两个端口 9200 和 9300：
 
 #### 安装Kibana
 Kibana是ES的一个配套工具，让用户在网页中可以直接与ES进行交互。
-> **brew install kibana**
-
+> **brew install kibana**</br>
+> **kibana** </br>
+```
+Kibana的默认端口是5601
+```
 ####  安装 httpie   [**链接**](https://httpie.org/doc#installation) curl也可以
 > **brew install httpie**</br>
 > **port install httpie**</br>
