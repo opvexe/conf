@@ -76,3 +76,4 @@
 ## Mac 软件环境安装配置
 
 1. [**Mac修改brew镜像**]()
+2. [**Mac安装ElasticSearch**]()
