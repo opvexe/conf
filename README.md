@@ -61,8 +61,8 @@
 
 1. [**反射**](https://github.com/shumintao/conf/blob/master/反射_01/课堂笔记.md)
 2. [**简单排序**](https://github.com/shumintao/conf/blob/master/%E6%8E%92%E5%BA%8F-01/src/mian.go)
-3. [**CSRF攻击**]()
-
+3. [**CSRF攻击**](https://github.com/shumintao/conf/blob/master/csrf.md)
+4. [**ElasticSearch使用文档**](https://github.com/shumintao/conf/blob/master/ElasticSearch%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md)
 
 
 ---
@@ -75,5 +75,5 @@
 
 ## Mac 软件环境安装配置
 
-1. [**Mac修改brew镜像**]()
-2. [**Mac安装ElasticSearch**]()
+1. [**Mac修改brew镜像**](https://github.com/shumintao/conf/blob/master/Mac%E4%BF%AE%E6%94%B9brew%E9%95%9C%E5%83%8F.md)
+2. [**Mac安装ElasticSearch**](https://github.com/shumintao/conf/blob/master/Mac%E5%AE%89%E8%A3%85ElasticSearch.md)
