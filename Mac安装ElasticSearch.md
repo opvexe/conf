@@ -1,17 +1,26 @@
-# Mac 安装 ElasticSearch
+# Mac 安装 ElasticSearch  [参考](https://juejin.im/entry/5913d6132f301e006b82e068)
 
 ************ ElasticSearch ，Kibana ，中文分词器sego ************
 
 #### 安装ElasticSearch [**链接**](https://www.jianshu.com/p/b128a880436d)
 Elasticsearch 是一款稳定高效的分布式搜索和分析引擎，它的底层基于 Lucene，并提供了友好的 RESTful API 来对数据进行操作，还有比较重要的一点是， Elasticsearch 开箱即可用，上手也比较容易。
 > **docker search elasticsearch**    ****搜索镜像****</br>
-> **docker pull elasticsearch:5.1.1 **  **** 拉取elasticsearch镜像 *****</br>
-> **docker run -id --name esearch -p 9200:9200 -p 9300:9300 elasticsearch** **** 完成后，启动Elasticsearch*** </br>
+> **docker pull elasticsearch:6.8.3 **  **** 拉取elasticsearch镜像 *****</br>
+> **docker run -id --name esearch -p 9200:9200 -p 9300:9300 elasticsearch:6.8.3** **** 完成后，启动Elasticsearch*** </br>
 > **docker ps***    **** 检查启动后的ElasticSearch启动镜像状态****</br>
 
 
 ```
-**通过宿主机的IP访问  如：http://宿主机IP:9200/****检查ElasticSearch的web服务运行情况**
+**通过宿主机的IP访问  如：http://宿主机IP:9200/****检查ElasticSearch的web服务运行情况**50548320
+```
+# docker容器关闭异常处理
+```
+1.查看进程
+	docker  ps  - a 
+2.杀死没用，删除
+	docker rm ae89feb13d62
+3.查看删除
+	docker ps  -l 
 ```
 
 
@@ -27,10 +36,27 @@ Elasticsearch 启动后，也启动了两个端口 9200 和 9300：
  curl 'http://localhost:9200/?pretty'
 ```
 
-#### 安装Kibana
+#### 安装Kibana 6.8.3版本
 Kibana是ES的一个配套工具，让用户在网页中可以直接与ES进行交互。
 > **brew install kibana**</br>
 > **kibana** </br>
+
+导入数据:  [参考文档](https://www.jianshu.com/p/76cc57d46328)
+
+```
+1.导入数据:
+curl -H 'Content-Type: application/x-ndjson' -XPOST 'localhost:9200/_bulk?pretty' --data-binary  @/Users/facebook/Downloads/logs.jsonl
+
+2.查看数据:
+curl -XGET 'localhost:9200/_cat/indices?v&pretty'
+```
+
+#### Kibana 的使用 
+```
+
+``
+
+	
 ```
 Kibana的默认端口是5601
 ```
