@@ -27,6 +27,7 @@
 2. [**数据库导入数据**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE.md)
 3. [**ASCII码对照表**](https://github.com/shumintao/conf/blob/master/pdf/ASCII%E7%A0%81%E5%AF%B9%E7%85%A7%E8%A1%A8.doc)
 4. [**Ubuntu安装插件**](https://github.com/shumintao/conf/blob/master/Ubuntu%E6%8F%92%E4%BB%B6.md)
+5. [**支付宝支付使用**]()
 
 
 
