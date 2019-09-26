@@ -1,6 +1,6 @@
-# Mac 安装 ElasticSearch  [参考](https://juejin.im/entry/5913d6132f301e006b82e068)
+# Mac 安装 ElasticSearch  [参考](https://juejin.im/entry/5913d6132f301e006b82e068) [参考](https://blog.csdn.net/wd2014610/article/details/82426863)
 
-************ ElasticSearch ，Kibana ，中文分词器sego ************
+************ ElasticSearch ，Kibana ，中文分词器sego ************  
 
 #### 安装ElasticSearch [**链接**](https://www.jianshu.com/p/b128a880436d)
 Elasticsearch 是一款稳定高效的分布式搜索和分析引擎，它的底层基于 Lucene，并提供了友好的 RESTful API 来对数据进行操作，还有比较重要的一点是， Elasticsearch 开箱即可用，上手也比较容易。
