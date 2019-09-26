@@ -29,6 +29,7 @@
 4. [**Ubuntu安装插件**](https://github.com/shumintao/conf/blob/master/Ubuntu%E6%8F%92%E4%BB%B6.md)
 5. [**支付宝支付使用**](https://github.com/shumintao/conf/blob/master/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E4%BD%BF%E7%94%A8.docx)
 6. [**redis持久化**](https://github.com/shumintao/conf/blob/master/redis%E6%8C%81%E4%B9%85%E5%8C%96%E5%8F%8A%E8%BF%9E%E6%8E%A5%E6%B1%A0.md)
+7. [**全文检索**]()
 
 
 
