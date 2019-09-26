@@ -28,7 +28,7 @@
 3. [**ASCII码对照表**](https://github.com/shumintao/conf/blob/master/pdf/ASCII%E7%A0%81%E5%AF%B9%E7%85%A7%E8%A1%A8.doc)
 4. [**Ubuntu安装插件**](https://github.com/shumintao/conf/blob/master/Ubuntu%E6%8F%92%E4%BB%B6.md)
 5. [**支付宝支付使用**]()
-
+6. [**redis持久化**]()
 
 
 
