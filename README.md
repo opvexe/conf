@@ -4,7 +4,7 @@
 
 > 引用文本：For installing the environment configuration under liunx
 
-## Go语言参考文档
+## Go语言文献资料
 
 1. [**Golang标准库文档**](https://studygolang.com/pkgdoc)
 2. [**Go语言圣经**](https://books.studygolang.com/gopl-zh/)
