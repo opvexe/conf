@@ -61,6 +61,7 @@ docker exec -it b8c7c128df2f /bin/bash
 
 2.查看目录
 ls
+cd config/
 
 3.编辑 .yml 文件
 vim elasticsearch.yml 
@@ -79,16 +80,18 @@ service docker restart
 
 ##### elasticsearch-head的安装
 
+[参考文档](https://blog.csdn.net/sinat_28434649/article/details/79285831)
+
 ```
 1..镜像拉取
 docker pull mobz/elasticsearch-head:5
 
 2.启动
-docker run -it --name="es-admin" -p 9100:9100 mobz/elasticsearch-head 
+docker run --name es-head -p 9100:9100 mobz/elasticsearch-head:5
 
 
 3.查看启动是否成功
-
+Started connect web server on http://localhost:9100
 ```
 
 
