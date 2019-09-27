@@ -29,10 +29,10 @@
 4. [**Ubuntu安装插件**](https://github.com/shumintao/conf/blob/master/Ubuntu%E6%8F%92%E4%BB%B6.md)
 5. [**支付宝支付使用**](https://github.com/shumintao/conf/blob/master/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E4%BD%BF%E7%94%A8.docx)
 6. [**redis持久化及连接池**](https://github.com/shumintao/conf/blob/master/redis%E6%8C%81%E4%B9%85%E5%8C%96%E5%8F%8A%E8%BF%9E%E6%8E%A5%E6%B1%A0.md)
-7. [**全文检索**](https://github.com/shumintao/conf/blob/master/Lucene%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2%E6%8A%80%E6%9C%AF.md)
-8. [**RESTful API**](https://github.com/shumintao/conf/blob/master/RESTful%20API%20.md)
-
-
+7. [**RESTful API**](https://github.com/shumintao/conf/blob/master/RESTful%20API%20.md)
+8. [**Lucene全文检索**](https://github.com/shumintao/conf/blob/master/Lucene%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2%E6%8A%80%E6%9C%AF.md)
+9. [**ElasticSearch使用文档**](https://github.com/shumintao/conf/blob/master/ElasticSearch%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md)
+10. [**安装ElasticSearch**](https://github.com/shumintao/conf/blob/master/Mac%E5%AE%89%E8%A3%85ElasticSearch.md)
 
 
 ---
@@ -63,7 +63,6 @@
 1. [**反射**](https://github.com/shumintao/conf/blob/master/反射_01/课堂笔记.md)
 2. [**简单排序**](https://github.com/shumintao/conf/blob/master/%E6%8E%92%E5%BA%8F-01/src/mian.go)
 3. [**CSRF攻击**](https://github.com/shumintao/conf/blob/master/csrf.md)
-4. [**ElasticSearch使用文档**](https://github.com/shumintao/conf/blob/master/ElasticSearch%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md)
 
 
 ---
@@ -76,7 +75,6 @@
 ## Mac 软件环境安装配置
 
 1. [**Mac修改brew镜像**](https://github.com/shumintao/conf/blob/master/Mac%E4%BF%AE%E6%94%B9brew%E9%95%9C%E5%83%8F.md)
-2. [**Mac安装ElasticSearch**](https://github.com/shumintao/conf/blob/master/Mac%E5%AE%89%E8%A3%85ElasticSearch.md)
 
 
 ---
