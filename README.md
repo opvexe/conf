@@ -4,6 +4,18 @@
 
 > 引用文本：For installing the environment configuration under liunx
 
+## Go语言参考文档
+
+1. [**Golang标准库文档**](https://studygolang.com/pkgdoc)
+2. [**Go语言圣经**](https://books.studygolang.com/gopl-zh/)
+3. [**Go开发者路线图**](https://cloud.tencent.com/developer/article/1425828)
+4. [**Beego框架**](https://beego.me/docs/mvc/model/query.md)
+5. [**Go语言高级编程**](https://chai2010.cn/advanced-go-programming-book/ch6-cloud/ch6-02-lock.html)
+6. [**kafka实现消息推拉**](https://studygolang.com/articles/17912)
+7. [**Redis Cluster**](https://www.jianshu.com/p/f18d3376c848)
+8. [**Etcd**](http://www.wuecho.com/2018/05/28/Go%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E7%B3%BB%E7%BB%9Fetcd/)
+9. [**Go语言爱好者周刊**](https://studygolang.com/topics/9761)
+10. [**Nginx配置文件**](https://www.jianshu.com/p/e8c29a49801c)
 
 ## Ubuntu 软件环境安装配置
 
