@@ -59,7 +59,7 @@
 5. [**MySQL讲义**](https://github.com/shumintao/conf/blob/master/03-MySQL_%E8%AE%B2%E4%B9%89--1.9.1.doc)
 6. [**通配符**](https://github.com/shumintao/conf/blob/master/%E9%80%9A%E9%85%8D%E7%AC%A6MySQL.md)
 7. [**MySQL事务的隔离级别**](https://github.com/shumintao/conf/blob/master/MySQL%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.md)
-8. [**MySQL备份与恢复**]()
+8. [**MySQL备份与恢复**](https://github.com/shumintao/conf/blob/master/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D.md)
 
 ---
 
