@@ -1,10 +1,12 @@
-# Mac 安装 ElasticSearch  
+# ElasticSearch  
+***全文检索服务器，基于Lucene的API。很容易搭建一个集群**</br>
+
 [参考文档1](https://juejin.im/entry/5913d6132f301e006b82e068)</br>
 [参考文档2](https://blog.csdn.net/wd2014610/article/details/82426863)</br>
 
->ElasticSearch安装及环境配置，Kibana安装及环境配置，中文分词器安装 
+>ElasticSearch安装及环境配置，Kibana安装及环境配置，中文分词器安装IK
 
-### 安装ElasticSearch 
+### 1.1安装ElasticSearch 
 
 [**参考安装**](https://www.jianshu.com/p/b128a880436d)
 
@@ -47,7 +49,39 @@ curl -XGET 'localhost:9200/_cat/indices?v&pretty'
 
 如果ElasticSearch服务停止或是挂掉，先使用docker删除对应的进程：docker rm ae89feb13d62
 
-### docker容器关闭异常处理
+### 1.2图形界面管理工具 ElasticSearch-head
+
+```
+1.安装node
+brew install node
+
+2.下载插件并安装
+git clone git://github.com/mobz/elasticsearch-head.git
+cd elasticsearch-head
+npm install
+
+3. 安装完成后在elasticsearch-head/node_modules目录下会出现grunt文件。
+如果没有grunt二进制程序，需要执行
+cd elasticsearch-head
+npm install grunt -
+
+4.修改服务器监听地址 修改elasticsearch-head下Gruntfile.js文件，默认监听在127.0.0.1下9200端口
+connect: {
+        server: {
+            options: {
+                hostname: '*',
+                port: 9100,
+                base: '.',
+                keepalive: true
+            }
+        }
+    } 
+
+```
+
+
+### 1.3docker容器关闭异常处理
+
 ```
 1.查看进程
 	docker  ps  - a 
@@ -57,7 +91,7 @@ curl -XGET 'localhost:9200/_cat/indices?v&pretty'
 	docker ps  -l 
 ```
 
-### 安装Kibana 6.8.3版本
+### 1.4安装Kibana 6.8.3版本
 >Kibana是ES的一个配套工具，让用户在网页中可以直接与ES进行交互。 Kibana的默认端口是5601
 
 ```
@@ -68,7 +102,7 @@ kibana
 
 ```
 
-### 安装httpie或使用curl
+### 1.5安装httpie或使用curl
 [参考文档](https://httpie.org/doc#installation)</br>
 
 ```
@@ -77,3 +111,254 @@ brew install httpie
 2.启动
 port install httpie
 ```
+### 1.5ElasticSearch相关概念（面向文档）
+
+对应关系:
+
+```
+Mysql:
+databases --> tables -->row ----> columns
+
+ElasticSearch:
+indexs ---> Types ----> Document---->Fields(域)
+
+映射：mapping  对应数据库表结构的定义
+
+```
+
+### 1.6ES使用
+
+1.创建索引，然后分片，副本（备份）</br>
+2.复合查询发送json数据，建议使用postman<br>
+
+
+1.创建索引库
+
+```
+PUT:		
+	http://127.0.0.1:9200/blog1
+	
+{
+	"mappings":{			//索引库信息
+		"article":{			//type的名称，mysql表的概念
+		"properties":{		//mysql表属性名称概念 相当于字段的定义
+				"id":{			//字段的名称
+					"type":"long",		//字段类型
+					"store":true,		//是否存储
+					"index":"not-analyzed" //默认是不索引的
+				},
+				"title":{			//标题
+					"type":"text",
+					"store":true,
+					"index":"analyzed",	//是否索引
+					"analyzer":"standard"  //分词器 ：标准分词器
+				},
+				"content":{			//内容
+					"type":"text",
+					"store":true,
+					"index":"analyzed",
+					"analyzer":"standard"
+				}
+			}
+		}
+	}
+	
+}
+
+```
+
+2.设置mappings 
+
+POST:		
+	http://127.0.0.1:9200/blog1(索引名称)/hello(相当于表名)_mappings(执行动作)
+
+```
+"hello":{			
+		"article":{			
+		"properties":{		
+				"id":{			
+					"type":"long",		
+					"store":true,	
+					"index":"not-analyzed" 
+				},
+				"title":{			
+					"type":"text",
+					"store":true,
+					"index":"analyzed",
+					"analyzer":"standard"  
+				},
+				"content":{		
+					"type":"text",
+					"store":true,
+					"index":"analyzed",
+					"analyzer":"standard"
+				}
+			}
+		}
+	}
+
+```	
+
+3.删除索引库
+
+DELETE:
+	http://127.0.0.1:9200/blog1
+	
+```
+"mappings":{			
+		"article":{			
+		"properties":{		
+				"id":{			
+					"type":"long",		
+					"store":true,	
+					"index":"not-analyzed" 
+				},
+				"title":{			
+					"type":"text",
+					"store":true,
+					"index":"analyzed",
+					"analyzer":"standard"  
+				},
+				"content":{		
+					"type":"text",
+					"store":true,
+					"index":"analyzed",
+					"analyzer":"standard"
+				}
+			}
+		}
+	}
+
+```
+
+4.创建文档 (一条数据就是一个Document)
+
+POST:		
+	http://127.0.0.1:9200/blog1/hello/1   (解释：blog数据库名，hello 表名,1 文档Document 对应row)
+
+```
+{
+	"id":1
+	"title":新添加文档
+	"content":"新添加的文档的内容"
+}
+
+```
+
+返回数据解析:
+
+```
+{
+	"_index":"blog1",
+	"_type":hello,
+	"_id":1,   //** _id 文档真正的id相当于主键， 并不是我们的id 属性
+	"_version":1,
+	"reslut":"created",
+	"_shards":{
+	"total":2,
+	"sucessfull":1,
+	"failed":0
+	}
+	"created":true
+}
+
+```
+
+
+5.删除文档
+
+DELETE:
+
+http://127.0.0.1:9200/blog1/hello/1 (删除blog1文档下hello表名为id为1的)
+
+
+
+不需要body
+
+
+6.修改文档 【Lucene底层实现的删除都是先删除后添加】
+	
+POST
+
+http://127.0.0.1:9200/blog1/hello/1 
+
+	
+```
+{
+	"id":1,
+	"title":"修改文档1",			//本质是先删除都添加
+	"content":"修改文档1内容"
+}
+```
+
+7.查询 根据_id
+
+GET
+
+http://127.0.0.1:9200/blog1/hello/1   查询的是主键_id 
+
+
+8.根据关键词 term
+
+POST
+
+http://127.0.0.1:9200/blog1/hello/_search  关键字_search
+
+```
+"query":{				//查询条件	query
+	"term":{		 //根据term关键词查询  必须要指定在哪个字段 (title)，哪个关键词  用户输入
+		"title":"关键词(用户输入)"
+	}
+}
+```
+
+9. querystring 带分析的查询  Lucene  queryPath
+
+
+POST
+
+http://127.0.0.1:9200/blog1/hello/_search  关键字_search
+
+```
+
+"query":{				
+	"query_string":{		//需要指定默认搜索域
+		"default_field":"title" //默认搜索域
+		"query":"搜索服务器"
+	}
+}
+
+```
+
+
+
+### 1.6ES集群
+概念：大于2个节点就可以成为集群，一个node成为一个服务器。每个节点都有自己的名臣。
+
+```
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
