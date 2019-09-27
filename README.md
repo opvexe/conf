@@ -14,7 +14,7 @@
 5. [**Ubuntu MySQL安装和启动**](https://github.com/shumintao/conf/blob/master/MySQL%E5%AE%89%E8%A3%85%E5%92%8C%E5%90%AF%E5%8A%A8%20.md)
 6. [**Navicat Premium 连接远端数据库**](https://github.com/shumintao/conf/blob/master/Navicat%20Premium%20%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%BA%93%20.md)
 7. [**redis数据库安装配置 - 使用**](https://github.com/shumintao/conf/blob/master/redis%E6%95%B0%E6%8D%AE%E5%BA%93.md)
-8. [**fastDFS图片上传||Elasticsearch搜索 - 安装及使用**](https://github.com/shumintao/conf/blob/master/fastDFS%E5%8F%8AElasticsearch.md)
+8. [**fastDFS图片上传 - - - Elasticsearch搜索 - 安装**](https://github.com/shumintao/conf/blob/master/fastDFS%E5%8F%8AElasticsearch.md)
 
 
 
@@ -28,8 +28,9 @@
 3. [**ASCII码对照表**](https://github.com/shumintao/conf/blob/master/pdf/ASCII%E7%A0%81%E5%AF%B9%E7%85%A7%E8%A1%A8.doc)
 4. [**Ubuntu安装插件**](https://github.com/shumintao/conf/blob/master/Ubuntu%E6%8F%92%E4%BB%B6.md)
 5. [**支付宝支付使用**](https://github.com/shumintao/conf/blob/master/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E4%BD%BF%E7%94%A8.docx)
-6. [**redis持久化**](https://github.com/shumintao/conf/blob/master/redis%E6%8C%81%E4%B9%85%E5%8C%96%E5%8F%8A%E8%BF%9E%E6%8E%A5%E6%B1%A0.md)
-7. [**全文检索**]()
+6. [**redis持久化及连接池**](https://github.com/shumintao/conf/blob/master/redis%E6%8C%81%E4%B9%85%E5%8C%96%E5%8F%8A%E8%BF%9E%E6%8E%A5%E6%B1%A0.md)
+7. [**全文检索**](https://github.com/shumintao/conf/blob/master/Lucene%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2%E6%8A%80%E6%9C%AF.md)
+8. [**RESTful API**](https://github.com/shumintao/conf/blob/master/RESTful%20API%20.md)
 
 
 
@@ -48,17 +49,14 @@
 
 ---
 
-## Vim
-
-1. [**Vim**](https://github.com/shumintao/conf/blob/master/Vim_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-
 
 ---
 
 ## Liunx
 
 1. [**Liunx**](https://github.com/shumintao/conf/blob/master/Liunx_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-2. [**通配符**](https://github.com/shumintao/conf/blob/master/%E9%80%9A%E9%85%8D%E7%AC%A6Liunx.md)
+2. [**Vim**](https://github.com/shumintao/conf/blob/master/Vim_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
+3. [**通配符**](https://github.com/shumintao/conf/blob/master/%E9%80%9A%E9%85%8D%E7%AC%A6Liunx.md)
 
 ## Go 代码
 
@@ -74,15 +72,14 @@
 
 ### [**Git环境搭建及操作**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
 
-
-
+---
 ## Mac 软件环境安装配置
 
 1. [**Mac修改brew镜像**](https://github.com/shumintao/conf/blob/master/Mac%E4%BF%AE%E6%94%B9brew%E9%95%9C%E5%83%8F.md)
 2. [**Mac安装ElasticSearch**](https://github.com/shumintao/conf/blob/master/Mac%E5%AE%89%E8%A3%85ElasticSearch.md)
 
 
-
+---
 ## HTML 
 
 1. [**基础标签01**](https://github.com/shumintao/conf/blob/master/HTML%20.md)
