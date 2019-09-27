@@ -49,33 +49,45 @@ curl -XGET 'localhost:9200/_cat/indices?v&pretty'
 
 如果ElasticSearch服务停止或是挂掉，先使用docker删除对应的进程：docker rm ae89feb13d62
 
+![1569568668420](./assets/1569568668420.png)
+
 ### 1.2图形界面管理工具 ElasticSearch-head
+[参考文献资料](https://blog.csdn.net/fw19940314/article/details/86482971)
+##### 修改跨域问题
 
 ```
-1.安装node
-brew install node
+1.进入容器
+docker exec -it b8c7c128df2f /bin/bash
 
-2.下载插件并安装
-git clone git://github.com/mobz/elasticsearch-head.git
-cd elasticsearch-head
-npm install
+2.查看目录
+ls
 
-3. 安装完成后在elasticsearch-head/node_modules目录下会出现grunt文件。
-如果没有grunt二进制程序，需要执行
-cd elasticsearch-head
-npm install grunt -
+3.编辑 .yml 文件
+vim elasticsearch.yml 
 
-4.修改服务器监听地址 修改elasticsearch-head下Gruntfile.js文件，默认监听在127.0.0.1下9200端口
-connect: {
-        server: {
-            options: {
-                hostname: '*',
-                port: 9100,
-                base: '.',
-                keepalive: true
-            }
-        }
-    } 
+4.增加跨域功能
+文件末尾：
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+
+5.重启容器
+service docker restart
+```
+效果图：
+
+![201909270347](./assets/201909270347.png)
+
+##### elasticsearch-head的安装
+
+```
+1..镜像拉取
+docker pull mobz/elasticsearch-head:5
+
+2.启动
+docker run -it --name="es-admin" -p 9100:9100 mobz/elasticsearch-head 
+
+
+3.查看启动是否成功
 
 ```
 
@@ -312,7 +324,8 @@ http://127.0.0.1:9200/blog1/hello/_search  关键字_search
 }
 ```
 
-9. querystring 带分析的查询  Lucene  queryPath
+
+9.querystring 带分析的查询  Lucene  queryPath
 
 
 POST
@@ -324,15 +337,62 @@ http://127.0.0.1:9200/blog1/hello/_search  关键字_search
 "query":{				
 	"query_string":{		//需要指定默认搜索域
 		"default_field":"title" //默认搜索域
-		"query":"搜索服务器"
+		"query":"今天在修路"
 	}
 }
 
 ```
 
 
+10.使用head 插件查询
 
-### 1.6ES集群
+ + 1.基本查询
+ 	+ 1.查询条件 
+ 		+  两个条件should ，两个只需要满足一个就行  多条件查询时 假设两个查询条件  OR
+ 		+  must：两个条件必须都满足   多条件查询时 假设两个查询条件 AND
+ + 2.复合查询
+
+对应效果图
+![1569568594217](./assets/1569568594217.png)
+
+
+### 1.6 中文分词器
+
+**** 标准分词器: 一个汉字一个词 ,标准分词器 中文只能分成一个汉字 ****
+
+1.查看分词器的分析结果 使用postman
+
+```
+http://127.0.0.1:9200/_analyze?analyze=standard&pretty=true&text="我是程序员"
+
+解释：
+	_analyze :分词器关键字
+	analyze=standard:指定标准分词器
+	pretty=true:表示格式化输出
+	text: 我们要分析的内容
+```
+
+** 做中文项目 我们要使用中文分词器 IK中文分词器***
+
+### 1.7 集成IK中文分析器 
+
+1.进入elasticsearch容器 -->plugins 目录下
+> docker exec -it b8c7c128df2f /bin/bash</br>
+> ls</br>
+> cd plugins/</br>
+2.下载ik分析器
+>wget https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.8.3/elasticsearch-analysis-ik-6.8.3.zip </br>
+>ls</br>
+3.解压缩
+> unzip xxx 重命名为ik
+4.重启
+> elasticsearch
+
+对应的版本号
+![20190114163441917](./assets/20190114163441917.png)
+
+
+### 1.7ES集群
 概念：大于2个节点就可以成为集群，一个node成为一个服务器。每个节点都有自己的名臣。
 
 ```
