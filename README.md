@@ -10,6 +10,7 @@
 2. [**Go语言圣经**](https://books.studygolang.com/gopl-zh/)
 3. [**Go开发者路线图**](https://cloud.tencent.com/developer/article/1425828)
 4. [**Beego框架**](https://beego.me/docs/mvc/model/query.md)
+5. [**Beego开发文档**](https://kancloud.cn/hello123/beego/126104)
 5. [**Go语言高级编程**](https://chai2010.cn/advanced-go-programming-book/ch6-cloud/ch6-02-lock.html)
 6. [**kafka实现消息推拉**](https://studygolang.com/articles/17912)
 7. [**Redis Cluster**](https://www.jianshu.com/p/f18d3376c848)
