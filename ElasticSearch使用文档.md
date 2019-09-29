@@ -18,6 +18,7 @@ func initSego()  {
 
 ## ElasticSearch 搜索
 
+
 ```
 /* 
  * 全文搜索
