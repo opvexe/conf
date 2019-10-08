@@ -141,6 +141,5 @@ func (node  *BinaryTreeNode)Copy() *BinaryTreeNode {
 	newNode.Data = node.Data
 	newNode.LeftChild = leftChild
 	newNode.RightChild = rightChild
-	fmt.Println("newNode :=",newNode)
 	return newNode
 }
