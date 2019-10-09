@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="442fe9d8-4282-43ba-99fb-ef86865ab88d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../data/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,8 +143,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build src/" />
       <item itemvalue="Go Build.go build mian.go" />
+      <item itemvalue="Go Build.go build src/" />
     </list>
     <recent_temporary>
       <list>
