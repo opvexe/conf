@@ -16,10 +16,11 @@ func main() {
 
 	//headSort(slice)
 
-	qiucklySort(slice,0,len(slice)-1)
+	//qiucklySort(slice,0,len(slice)-1)
 
 	fmt.Println(slice)
 }
+
 
 /*
  冒泡排序  [相邻两元素之间比较]
