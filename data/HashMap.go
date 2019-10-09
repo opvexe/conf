@@ -88,6 +88,27 @@ func (this *Emplink)ShowLink(no int)  {
 	}
 }
 
+//查找雇员
+func (this *HashTable)FindById(id int) *Emp {
+	//确定散列列表确定在哪根链表
+	hashNo := this.HashFun(id)
+	return this.linkArr[hashNo].FindById(id)
+}
+
+//根据Id 查找对应的雇员,没找到就返回nil
+func (this *Emplink)FindById(id int) *Emp {
+	cur := this.Head
+	for {
+		if cur!=nil&&cur.Id == id{
+			return cur
+		}else if cur ==nil{
+			break
+		}
+		cur = cur.Next
+	}
+	return nil
+}
+
 //求膜散列
 func (this *HashTable) HashFun(id int) int {
 	return id % 7 //对应链表的下标
@@ -97,7 +118,7 @@ func (this *HashTable) HashFun(id int) int {
 
 func main() {
 
-	var hashTable HashTable
+	var hashtable HashTable
 	key  := ""
 	id := 0
 	name := ""
@@ -119,12 +140,17 @@ func main() {
 			fmt.Scanln(&name)
 
 			emp :=&Emp{id,name,nil}
-			hashTable.Insert(emp)
+			hashtable.Insert(emp)
 
 		case "show":
 
+			hashtable.ShowAll()
 		case "find":
 
+			fmt.Println("请雇员输入id")
+			fmt.Scanln(&id)
+			emp:=hashtable.FindById(id)
+			fmt.Println("查询到%s",emp.Name)
 		case "exit":
 
 		default:

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="442fe9d8-4282-43ba-99fb-ef86865ab88d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../data/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../data/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/HashMap.go" beforeDir="false" afterPath="$PROJECT_DIR$/../data/HashMap.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mian.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mian.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sort/sort.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/sort/sort.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
