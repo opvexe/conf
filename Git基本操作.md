@@ -35,6 +35,52 @@
 >git push -u origin master
 
 
+## 代码回滚
+
+
+
++ **情况1: 代码commit但未push，想回到commit状态（保留本次commit代码块）**
+
+```
+$ git log 
+```
+
+
+![Git](./assets/20191011825.png)
+
+```
+$ git reset bfd7b2698079fcdacb9df648345f07a9937ccfb8  
+```
+
+---
+
+
++ **情况2: 代码commit但未push，想回到commit状态（不保留本次commit代码块）**
+
+
+```
+$ git log 
+```
+
+![Git](./assets/20191011825.png)
+
+```
+$ git reset -hard bfd7b2698079fcdacb9df648345f07a9937ccfb8
+```
+
+
+## 工作区和暂存区
+
+
+
+
+
+
+
+
+
+
+
 ## 暂存区
 ***  将本地代码提交到暂存区 **** 
 
