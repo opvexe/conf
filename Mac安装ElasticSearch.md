@@ -1,5 +1,5 @@
 # ElasticSearch  
-***全文检索服务器，基于Lucene的API。很容易搭建一个集群**</br>
+***全文检索服务器，基于Lucene的API。很容易搭建一个集群**
 
 [参考文档1](https://juejin.im/entry/5913d6132f301e006b82e068)</br>
 [参考文档2](https://blog.csdn.net/wd2014610/article/details/82426863)</br>
@@ -51,9 +51,9 @@ curl -XGET 'localhost:9200/_cat/indices?v&pretty'
 
 ![1569568668420](./assets/1569568668420.png)
 
-### 1.2图形界面管理工具 ElasticSearch-head
+### 1.2 图形界面管理工具 ElasticSearch-head
 [参考文献资料](https://blog.csdn.net/fw19940314/article/details/86482971)
-##### 修改跨域问题
+##### 1.1 修改跨域问题
 
 ```
 1.进入容器
@@ -78,7 +78,7 @@ service docker restart
 
 ![201909270347](./assets/201909270347.png)
 
-##### elasticsearch-head的安装
+##### 1.2 elasticsearch-head的安装
 
 [参考文档](https://blog.csdn.net/sinat_28434649/article/details/79285831)
 
@@ -118,13 +118,13 @@ kibana
 ```
 
 ### 1.5安装httpie或使用curl
-[参考文档](https://httpie.org/doc#installation)</br>
+[参考文档](https://httpie.org/doc#installation)
 
-```
+```shell
 1.安装
-brew install httpie
+$ brew install httpie
 2.启动
-port install httpie
+$ port install httpie
 ```
 ### 1.5ElasticSearch相关概念（面向文档）
 
@@ -212,7 +212,7 @@ POST:
 		}
 	}
 
-```	
+```
 
 3.删除索引库
 
@@ -297,7 +297,7 @@ POST
 
 http://127.0.0.1:9200/blog1/hello/1 
 
-	
+
 ```
 {
 	"id":1,
