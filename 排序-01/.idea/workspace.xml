@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="442fe9d8-4282-43ba-99fb-ef86865ab88d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../data/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../data/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ubuntu插件.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Ubuntu插件.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +15,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mian.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="750">
               <caret line="52" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
@@ -24,7 +24,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sort/sort.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="-1399">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
@@ -55,7 +55,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="161" />
+    <option name="x" value="838" />
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
@@ -68,6 +68,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,7 +96,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -143,8 +143,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build mian.go" />
       <item itemvalue="Go Build.go build src/" />
+      <item itemvalue="Go Build.go build mian.go" />
     </list>
     <recent_temporary>
       <list>
@@ -153,10 +153,10 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="161" y="23" width="1680" height="1027" extended-state="1" />
+    <frame x="838" y="23" width="1680" height="1027" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15995117" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16178267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -211,30 +211,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sort.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sort/lianxi.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sort.go" />
+    <entry file="file://$PROJECT_DIR$/src/sort/lianxi.go" />
     <entry file="file://$PROJECT_DIR$/src/mian.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="750">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sort/sort.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
+        <state relative-caret-position="-1399">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>

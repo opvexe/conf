@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b114f0c-eb7c-4f40-84f0-694ae3e22bb1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../排序-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../排序-01/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3b114f0c-eb7c-4f40-84f0-694ae3e22bb1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HashMap.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="129" column="34" selection-start-line="129" selection-start-column="34" selection-end-line="129" selection-end-column="34" />
+            <state relative-caret-position="2205">
+              <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -126,7 +124,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="11" />
     <option name="y" value="23" />
     <option name="width" value="1680" />
@@ -179,7 +177,7 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="23" width="1680" height="1027" extended-state="1" />
+    <frame x="11" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -278,8 +276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HashMap.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="129" column="34" selection-start-line="129" selection-start-column="34" selection-end-line="129" selection-end-column="34" />
+        <state relative-caret-position="2205">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
         </state>
       </provider>
     </entry>

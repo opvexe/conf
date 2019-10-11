@@ -48,3 +48,25 @@
 ## gcc安装
 > sudo apt-get  build-dep  gcc
 > gcc --version 
+
+
+## 安装VMware Tools
+
+>参照：https://blog.csdn.net/zxf1242652895/article/details/78203473
+
+
+
+## 安装net 
+
+> sudo apt install net-tools
+
+
+## 安装ssh
+
+>sudo apt install ssh
+
+
+## GoLand 安装及安装环境配置
+
+>sudo apt install golang-go
+
