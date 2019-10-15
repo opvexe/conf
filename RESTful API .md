@@ -25,7 +25,7 @@
 
 ## 状态码
 
-```
+```http
 GET
 
 200（OK） - 表示已在响应中发出
@@ -54,3 +54,4 @@ POST
 500 （internal server error）- 通用错误响应
 503 （Service Unavailable）- 服务当前无法处理请求
 ```
+
