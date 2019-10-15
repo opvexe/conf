@@ -76,10 +76,10 @@
 
 ## Liunx
 
-1. [**Liunx**](https://github.com/shumintao/conf/blob/master/Liunx_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-2. [**Vim**](https://github.com/shumintao/conf/blob/master/Vim_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-3. [**通配符**](https://github.com/shumintao/conf/blob/master/%E9%80%9A%E9%85%8D%E7%AC%A6Liunx.md)
-4. [**sed文本处理**]()
+1. [**Liunx**](https://github.com/shumintao/conf/blob/master/Liunx/Liunx_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
+2. [**Vim**](https://github.com/shumintao/conf/blob/master/Liunx/Vim_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
+3. [**通配符**](https://github.com/shumintao/conf/blob/master/Liunx/%E9%80%9A%E9%85%8D%E7%AC%A6Liunx.md)
+4. [**sed文本处理**](https://github.com/shumintao/conf/blob/master/Liunx/sed%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86.md)
 
 ## Go 代码
 
