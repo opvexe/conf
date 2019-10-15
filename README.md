@@ -68,7 +68,7 @@
 2. [**数据结构 - 02**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_02/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
 3. [**数据结构 - 03**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_03/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
 4. [**数据结构 - 04**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_04/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%20-%20%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-5. [**数据结构 - 哈希表实现 - 05**]()
+5. [**数据结构 - 哈希表实现 - 05**](https://github.com/shumintao/conf/blob/master/%E5%93%88%E5%B8%8C%E8%A1%A8.md)
 5. [**数据结构 - 代码**](https://github.com/shumintao/conf/tree/master/data) 
 6. [**docker -01**]()
 
