@@ -50,15 +50,15 @@
 
 ## 数据库MySQL
 
-1. [**数据库 - 01**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-2. [**数据库 - 02**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93_02/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-3. [**数据库 - 03**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93_03/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-4. [**数据库 - 04**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93_04/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
-5. [**MySQL讲义**](https://github.com/shumintao/conf/blob/master/03-MySQL_%E8%AE%B2%E4%B9%89--1.9.1.doc)
-6. [**通配符**](https://github.com/shumintao/conf/blob/master/%E9%80%9A%E9%85%8D%E7%AC%A6MySQL.md)
+1. [**数据库 - 01**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93_01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
+2. [**数据库 - 02**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93_02/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
+3. [**数据库 - 03**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93_03/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
+4. [**数据库 - 04**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93_04/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0.md)
+5. [**MySQL讲义**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/03-MySQL_%E8%AE%B2%E4%B9%89--1.9.1.doc)
+6. [**通配符**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%80%9A%E9%85%8D%E7%AC%A6MySQL.md)
 7. [**MySQL事务的隔离级别**](https://github.com/shumintao/conf/blob/master/MySQL%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.md)
-8. [**MySQL备份与恢复**](https://github.com/shumintao/conf/blob/master/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D.md)
-9. [**数据库导入导出**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE.md)
+8. [**MySQL备份与恢复**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D.md)
+9. [**数据库导入导出**](https://github.com/shumintao/conf/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE.md)
 
 ---
 
