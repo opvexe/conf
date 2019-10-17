@@ -39,6 +39,13 @@
 5.推送到远端
 >git push -u origin master
 
+6.显示文件状态
+
+> git status
+
+7.显示当前分支的版本历史
+
+> git log 
 
 ## 3. 代码回滚
 
