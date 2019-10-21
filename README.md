@@ -26,8 +26,8 @@
 4. [**VMware网络配置 - 桥接模式与NAT模式的区别**](https://github.com/shumintao/conf/blob/master/VMware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.md)
 5. [**Ubuntu MySQL安装和启动**](https://github.com/shumintao/conf/blob/master/MySQL%E5%AE%89%E8%A3%85%E5%92%8C%E5%90%AF%E5%8A%A8%20.md)
 6. [**Navicat Premium 连接远端数据库**](https://github.com/shumintao/conf/blob/master/Navicat%20Premium%20%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%BA%93%20.md)
-7. [**redis数据库安装配置 - 使用**](https://github.com/shumintao/conf/blob/master/redis%E6%95%B0%E6%8D%AE%E5%BA%93.md)
-8. [**fastDFS图片上传 - - - Elasticsearch搜索 - 安装**](https://github.com/shumintao/conf/blob/master/fastDFS%E5%8F%8AElasticsearch.md)
+7. [**redis数据库安装配**](https://github.com/shumintao/conf/blob/master/redis%E6%95%B0%E6%8D%AE%E5%BA%93.md)
+8. [**fastDFS图片上传 **](https://github.com/shumintao/conf/blob/master/fastDFS%E5%8F%8AElasticsearch.md)
 
 
 
