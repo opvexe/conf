@@ -94,8 +94,8 @@
 
 ## Git 操作
 
-1. [**Git环境搭建及操作--1**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
-2. [**Git环境搭建及操作--2**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
+1. [**Git环境搭建及操作--个人总结**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
+2. [**Git环境搭建及操作--全面总结**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
 ---
 ## Mac 软件环境安装配置
 
