@@ -2,7 +2,7 @@
 
 [参考文献](https://juejin.im/post/5b852d476fb9a019e4505873)
 
-## 1.protobuf下载
+## ==1.protobuf下载==
 
 ```json
 下载地址地址：
@@ -17,13 +17,13 @@ Mac版本:
 
 ## 2.指定文件目录
 
-- 下载完毕后，解压 protoc-3.10.0-osx-x86_64.zip 压缩包
+- ==下载完毕后，解压 protoc-3.10.0-osx-x86_64.zip 压缩包==
 
 ![截屏2019-10-21下午5.18.17](assets/201910210519.png)
 
 
 
-- 将解压文件放指定目录
+- ==将解压文件放指定目录==
 
   ```shell
   # 将bin目录内的protoc拷贝至/usr/local/bin文件目录下
@@ -35,7 +35,7 @@ Mac版本:
 
   
 
-## 3. 安装protoc-gen-go中间件
+## ==3. 安装protoc-gen-go中间件==
 
 ```shell
 # 安装protoc-gen-go，安装路径在$GOPATH/src/github.com/目录下
@@ -46,7 +46,7 @@ $ go get -u github.com/golang/protobuf/protoc-gen-go
 
 ## 4.protoc使用语法
 
-- 文件目录pb/test.proto  ** 严格执行文件目录结构 pb/xxx
+- ==文件目录pb/test.proto  ** 严格执行文件目录结构 pb/xxx==
 
 ```protobuf
 //1. 指定proto的版本号
@@ -66,7 +66,7 @@ message Person{
 
 
 
-## 5.protoc编译
+## ==5.protoc编译==
 
 ```shell
 # go_out 输出
@@ -76,6 +76,32 @@ $ protoc --go_out=. *.proto
 ```
 
 
+
+## ==6.序列化与反序列化==
+
+```go
+/* 定义结构体 */
+lisa := pb.Person{
+		Name:"lisa",
+		Age:20,
+}
+
+/* 反序列化 */
+data,err:=proto.Marshal(&lisa)
+if err!=nil {
+	fmt.Println("Marshal err",err)
+	return
+}
+
+/* 序列化 */
+var stu pb.Person
+err=proto.Unmarshal(data,&stu)
+if err!=nil {
+	fmt.Println("Unmarshal err",err)
+	return
+}
+fmt.Println("Name:",stu.Name,",Age:",stu.Age)
+```
 
 
 
