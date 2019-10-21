@@ -1,13 +1,13 @@
 ## CSS与HTML结合
 
 #### 内联样式 不推荐使用
-```
+```html
 案例:
 <div style="color:red;">hello css</div>
 			  key:value 键值
 ```
 #### 内部样式  比较常用
-```
+```html
 在head标签内，定义style标签，style 标签的标签内容就是css 代码
 
 案例:
@@ -22,7 +22,7 @@ head标签内:
 
 ```
 #### 外部样式
-```
+```html
 1.在定义css资源文件
 2.在head标签内，定义link标签，来引入外部的资源文件
 
@@ -46,7 +46,7 @@ div{
 ## CSS语法
 
 #### 格式
-```
+```html
 选择器 {
 	属性名:属性值;
 	属性名:属性值;
@@ -73,9 +73,10 @@ p {
 	+ 类选择器: 选择具有相同的class属性值的元素
 	
 	
+
 id选择器案例:
 
-```
+```html
 <div id="div1"> blog</div>
 
 <style> #div1{ color:red;} </style>
@@ -85,7 +86,7 @@ id选择器案例:
 
 元素选择器案例：
 
-```
+```html
 div{
 	color:red;
 }
@@ -98,7 +99,7 @@ div{
 
 类选择器案例：
 
-```
+```html
 . class1{
 	color:red;
 }
@@ -120,7 +121,7 @@ div{
 5. 属性选择器: 选择元素名称，属性名=属性值的元素 语法: 元素名称[属性名="属性值"]{}   一般用于input标签
 6. 伪类选择器: 选择一些元素的状态 语法: 元素:状态{}
 
-```
+```html
 
 <div>
 	<p>北京大学</p>
@@ -142,7 +143,9 @@ div{
 
 ```
 
-```
+
+
+```html
 属性选择器案例:
 <input type="text"> 
 <input type="password"> 
@@ -156,7 +159,9 @@ div{
 
 ```
 
-```
+
+
+```html
 伪类选择器案例:
 如：状态
 	*link:初始化状态
@@ -190,7 +195,7 @@ div{
 + text-align:对其方式
 + line-height:文本的高度，行高
 
-```
+```html
 <style>
  p {
  	color:red;

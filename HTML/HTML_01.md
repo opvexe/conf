@@ -1,6 +1,6 @@
 # HTML——01 [参考资料](https://www.w3school.com.cn/tags/tag_hr.asp)
 ## 文件标签
- 
+
    + htm:html 文档的根标签
    + head:头标签，引用外部资源
    + title:定义标题的标签
@@ -20,9 +20,9 @@
    + `<font> ` :对应字体标签 可以修改字体的
 
    + html属性  不支持 不推荐
-    + `<hr color="red" widths="200" size="10" align="left">` size:文本的高度 
-    + `<font color="red" size="5" face="楷体">`  face：字体字
-  
+        + `<hr color="red" widths="200" size="10" align="left">` size:文本的高度 
+        + `<font color="red" size="5" face="楷体">`  face：字体字
+
 属性的定义: 
 	
   + color 
@@ -33,7 +33,7 @@
   + width
   	+ 1.数值 :width = "20" ，数值的单位，默认是px(像素)
   	+ 2.%数值: 占比相对于父元素的比例 50%  body 的相对比例 
-  	
+  
   + center  标签
 
 
@@ -54,7 +54,7 @@
 // 默认 属性 digt,square ,cicle   ==== ** =====
 
 
-```
+```html
 //有序
 eg:
 	<ol type ="A" start="5">   FEGH 排序
@@ -74,7 +74,7 @@ eg:
 ```
 
 ## 连接标签
-	 
+
  + a: 超链接标签 
  	+ `href 属性:  eg: <a href="http://www.baidu.com">点我</a>   //href表示了点击超链接跳转的位置  ***本页面内部跳转 ***`
  	+ `_blank: eg: <a href="http://www.baidu.com" target="_blank">点我</a>   //点击打开新窗口跳转`
@@ -100,7 +100,7 @@ eg: `<a href="http://www.baidu.com"> <img src="image/banner.png"></a>`
   	+ <tbody> : 表示表格的体部分
   	+ <tfoot> : 表示表格的脚部分
 
-```
+```html
 <table border="1" width="50%" cellpadding="0" cellspadding="0">
     <caption>学生信息表</caption>
  <tr>
@@ -131,7 +131,7 @@ eg: `<a href="http://www.baidu.com"> <img src="image/banner.png"></a>`
 
 ## 语义化标签
 
-```
+```html
 eg:htm4
 <div id ="header"></div>
 <div id ="footer"></div>

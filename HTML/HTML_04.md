@@ -1,6 +1,6 @@
 ## DOM
 
-```
+```html
 功能：控制html文档的内容
 代码：获取页面的标签（元素对象） Element
 	document.getElementById("id值")
@@ -32,7 +32,7 @@ title.innerHTML = "不识妻美刘强东"
 
 功能:某些组件被执行了某些操作后，触发某些代码的执行。
 
-```
+```html
 1.如何绑定时间
 	1.直接在Html标签上，指定事件的属性，属性值就是js代码。
 	2.事件 onclick --单击事件
@@ -58,3 +58,4 @@ light.onclick = function fun(){
 }
 </script>
 ```
+

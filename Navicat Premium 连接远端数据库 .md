@@ -1,6 +1,6 @@
 #  Navicat Premium 连接远端数据库 
 
-```
+```shell
 修改:
 	sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf 
 修改文件:
@@ -8,7 +8,7 @@
  退出，保存，重启MySQL服务器
 ```
 
-```
+```shell
 **解决方法:**
 
 	1.使用Linux下文字界面登录数据库： mysql -uroot -p123456
@@ -23,3 +23,4 @@
     
     6.无需重启MySQL数据库，直接重连 Navicat 即可
 ```
+

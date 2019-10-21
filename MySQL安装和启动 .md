@@ -4,7 +4,7 @@
 
 > Linux 下的MySQL安装，十分简单。保证联网状态下，直接使用命令即可顺序完成。
 
-```
+```shell
 sudo apt-get update 
 
 sudo apt-get install mysql-server
@@ -34,7 +34,7 @@ sudo aptitude show mysql-server
 如果看到了一个绿色的小灯亮起，就表示MySQL服务正在欢快地运行着。如：
 ![1569080857960](./assets/1569080857960.png)
 
-```
+```shell
 也可以利用网络编程阶段我们接触过的netstat命令，来查看MySQL服务器的启动状态。
 
 对应的是一个名为“mysqld”的守护进程。
@@ -49,7 +49,7 @@ sudo aptitude show mysql-server
 
 ## 3.登录MySQL数据库
 
-```
+```shell
 使用“mysql”关键字，-h指定IP地址，-P指定端口号（3306），-u指定用户名（root），-p指定密码（123456）即可登录MySQL数据库。如：
 
 mysql -h127.0.0.1 -P3306 -uroot -p123456

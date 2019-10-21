@@ -1,6 +1,6 @@
 ## JavaScript
 
-####基本语法
+#### 基本语法
 
 + 基本语法
 	+ 与html结合方式
@@ -43,7 +43,7 @@
 
 1.内部的js
 
-```
+```html
 //在html内部定义script标签（可以写在html任意位置）
 <script>
 	alert("hello word")
@@ -54,7 +54,7 @@
 
 2.定义变量
 
-```
+```html
 案例一：
 <script>
 var a = 3;
@@ -101,7 +101,7 @@ for (var i :=1;i<=9;i++){
 
 2.外部的js
 
-```
+```html
 //使用src加载外部的文件----> 外部js文件一般放在js目录下 
 <script src="js/a.js"> </script>
 
@@ -113,7 +113,7 @@ alert("hello word")
 
 + 函数对象 
 
-```
+```html
 1.函数对象
 <script>
 
@@ -156,7 +156,7 @@ for (var i=0;i<arguments.length,i++){
 
 + 数组对象 
 
-```
+```html
 //创建 
 1.var arr  = new Array(元素列表);
 2.var arr = new Array(默认长度);
@@ -195,7 +195,7 @@ document.write(arr5+"<br>")
 
 + 日期对象
 
-```
+```html
 //创建
 1.var date = new date();
 
@@ -210,7 +210,7 @@ date.getTime();
 
 + Math对象
 
-```
+```html
 //创建
 	特点:不用创建直接使用. Math.方法名
 
@@ -219,7 +219,6 @@ date.getTime();
 //属性
 Math.PI()
 Math.Random() 
-
 ```
 
 

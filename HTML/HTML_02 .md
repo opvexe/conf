@@ -5,7 +5,7 @@
 
 > form用于定义表单的，可以定义一个范围，范围代表采集用户数据的范围。
 
-```
+```html
 <form>
 用户名:<input></br>
 密码：<input></br>
@@ -32,27 +32,26 @@ form标签的属性:
    +  datetime： 时间日期选择器
    +  email: 邮箱输入框
 
- 
+
 #### 下拉列表
 
    + select:选择框  `<select name="province"> <option value=""> 请选择</option> <option value="1" selected> 上海</option></select>` option：选择项 value:提交的数值 selected:默认选项
- 
+
 
 #### 文本域
 
  + textarea: 文本域  name:提交指定他的name
  + cols : 列数
  + rows : 默认多少行
- 
-```
+
+```html
 <textarea cols="20" rows="5" name="data"> 
 </textarea>
-
 ```
 
 ## 注册页面
 
-```
+```html
 <form action="#" method="post"> 
 <table border="1" algin="center" width="500">
 <tr> 
@@ -107,6 +106,5 @@ form标签的属性:
 
 </table>
 </form>
-
-
 ```
+

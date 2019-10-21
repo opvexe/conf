@@ -1,4 +1,4 @@
-## VSCode 搭建golang 环境
+## VSCode 搭建golang 环境及安装SFTP
 
 
 
