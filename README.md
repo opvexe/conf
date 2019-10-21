@@ -4,20 +4,6 @@
 
 > 引用文本：For installing the environment configuration under liunx
 
-## Go语言文献资料
-
-1. [**Golang标准库文档**](https://studygolang.com/pkgdoc)
-2. [**Go语言圣经**](https://books.studygolang.com/gopl-zh/)
-3. [**Go开发者路线图**](https://cloud.tencent.com/developer/article/1425828)
-4. [**Beego框架**](https://beego.me/docs/mvc/model/query.md)
-5. [**Beego开发文档**](https://kancloud.cn/hello123/beego/126104)
-5. [**Go语言高级编程**](https://chai2010.cn/advanced-go-programming-book/ch6-cloud/ch6-02-lock.html)
-6. [**kafka实现消息推拉**](https://studygolang.com/articles/17912)
-7. [**Redis Cluster**](https://www.jianshu.com/p/f18d3376c848)
-8. [**Etcd**](http://www.wuecho.com/2018/05/28/Go%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E7%B3%BB%E7%BB%9Fetcd/)
-9. [**Go语言爱好者周刊**](https://studygolang.com/topics/9761)
-10. [**Nginx配置文件**](https://www.jianshu.com/p/e8c29a49801c)
-
 ## Ubuntu 软件环境安装配置
 
 1. [**Goland安装及环境配置**](https://github.com/shumintao/conf/blob/master/Goland%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.md)
@@ -28,8 +14,6 @@
 6. [**Navicat Premium 连接远端数据库**](https://github.com/shumintao/conf/blob/master/Navicat%20Premium%20%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%BA%93%20.md)
 7. [**redis数据库安装配**](https://github.com/shumintao/conf/blob/master/redis%E6%95%B0%E6%8D%AE%E5%BA%93.md)
 8. [**fastDFS图片上传 **](https://github.com/shumintao/conf/blob/master/fastDFS%E5%8F%8AElasticsearch.md)
-
-
 
 ---
 
@@ -108,6 +92,20 @@
 1. [**Git环境搭建及操作--个人总结**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
 2. [**Git环境搭建及操作--全面总结**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
 ---
+
+## Go语言文献资料
+
+1. [**Golang标准库文档**](https://studygolang.com/pkgdoc)
+2. [**Go语言圣经**](https://books.studygolang.com/gopl-zh/)
+3. [**Go开发者路线图**](https://cloud.tencent.com/developer/article/1425828)
+4. [**Beego框架**](https://beego.me/docs/mvc/model/query.md)
+5. [**Beego开发文档**](https://kancloud.cn/hello123/beego/126104)
+5. [**Go语言高级编程**](https://chai2010.cn/advanced-go-programming-book/ch6-cloud/ch6-02-lock.html)
+6. [**kafka实现消息推拉**](https://studygolang.com/articles/17912)
+7. [**Redis Cluster**](https://www.jianshu.com/p/f18d3376c848)
+8. [**Etcd**](http://www.wuecho.com/2018/05/28/Go%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E7%B3%BB%E7%BB%9Fetcd/)
+9. [**Go语言爱好者周刊**](https://studygolang.com/topics/9761)
+10. [**Nginx配置文件**](https://www.jianshu.com/p/e8c29a49801c)
 ## Mac 软件环境安装配置
 
 1. [**Mac修改brew镜像**](https://github.com/shumintao/conf/blob/master/Mac%E4%BF%AE%E6%94%B9brew%E9%95%9C%E5%83%8F.md)
