@@ -1,40 +1,56 @@
 # Goland安装及环境配置
 
-## 下载Goland 
+## 1.安装Go及Goland
 
-> GoLand官网下载 
-[**Download GoLand**](https://www.jetbrains.com/go/download/#section=linux)
+### 1.1 下载Goland 
 
-## 下载Go的包
-
-> sudo apt-get install golang-go
-
-##  liunx 文件目录结构
+```json
+// GoLand官网下载地址
+https://www.jetbrains.com/go/download/#section=linux
 ```
+
+### 1.2下载Go的包
+
+```shell
+# 下载Go的SDK包
+$ sudo apt-get install golang-go
+```
+
+### 1.3liunx 文件目录结构
+```shell
+# liunx 文件目录介绍
 用户下载软件：/usr/local/ 
 环境变量：/etc/
-日志：  /var/log/
+日志：/var/log/
 ```
 
 
-## Go环境准备
 
-#### 安装Go
-笔者是Mac系统，安装Go有多种方式，通过brew、下载源码安装go等方式可以安装go。
+## 2. Go环境准备
 
-在bash_profile中自定义GOPATH和GOBIN位置：
+### 2.1 配置环境变量
+- 笔者是Mac系统，安装Go有多种方式，通过brew、下载源码安装go等方式可以安装go。
 
-```
+  在bash_profile中自定义GOPATH和GOBIN位置：
+
+>1、打开终端输入cd ~进入用户主目录;
+>2、输入ls -all命令查看是否存在.bash_profile;
+>3、存在既使用vim .bash_profile 打开文件;
+>4、输入 i 进入vim编辑模式；
+>5、输入下面代码，
+
+```shell
 GOROOT=/usr/local/go
 export GOPATH=/Users/user/aoho/go-workspace
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN:$GOROOT/bin
-
 ```
 
-安装完成之后，查看go的环境变量：go env。
+- 安装完成之后，查看go的环境变量：
 
-```
+  `终端输入: go env`
+
+```shell
 GOARCH="amd64"
 GOBIN="/usr/local/go/bin/go"
 GOEXE=""
@@ -56,24 +72,21 @@ CGO_CXXFLAGS="-g -O2"
 CGO_FFLAGS="-g -O2"
 CGO_LDFLAGS="-g -O2"
 PKG_CONFIG="pkg-config"
-
 ```
 
-go的版本为：go version go1.9.3 darwin/amd64。
 
+### 2.2GOPATH和GOROOT解释说明
 
-## GOPATH和GOROOT
+* GOROOT不是必须要设置的。默认go会安装在/usr/local/go下，但也允许自定义安装位置，GOROOT的目的就是告知go当前的安装位置，编译的时候从GOROOT去找SDK的system libariry。
 
-GOROOT不是必须要设置的。默认go会安装在/usr/local/go下，但也允许自定义安装位置，GOROOT的目的就是告知go当前的安装位置，编译的时候从GOROOT去找SDK的system libariry。
-
-如上面展示的结果，笔者使用的就是默认的安装地址，也可以通过 export GOROOT=$HOME/go1.9.3指定。
-
-GOPATH必须要设置，但并不是固定不变的。GOPATH的目的是为了告知go，需要代码的时候，去哪里查找。注意这里的代码，包括本项目和引用外部项目的代码。GOPATH可以随着项目的不同而重新设置。
+* GOPATH必须要设置，但并不是固定不变的。GOPATH的目的是为了告知go，需要代码的时候，去哪里查找。注意这里的代码，包括本项目和引用外部项目的代码。GOPATH可以随着项目的不同而重新设置。
 
 GOPATH下会有3个目录：src、bin、pkg。
 
 - src目录：go编译时查找代码的地方；
 - bin目录：go get这种bin工具的时候，二进制文件下载的目的地；
 - pkg目录：编译生成的lib文件存储的地方。
+- 
 
-[**安装Go**](https://juejin.im/post/5c6ac37cf265da2de7134242)
+[**安装Go文献**](https://juejin.im/post/5c6ac37cf265da2de7134242)
+
