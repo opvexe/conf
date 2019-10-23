@@ -70,12 +70,13 @@ $ go get -u github.com/golang/protobuf/protoc-gen-go
 ## 5.protoc使用语法
 
 - ==文件目录pb/test.proto  ** 严格执行文件目录结构 pb/xxx==
+-  ==定义结构体==
 
 ```protobuf
 //1. 指定proto的版本号
 syntax = "proto3";
 
-//2. 生成go语言的包名
+//2. 生成go语言的包名 --> 生成test.pb.go 的包 
 package pb;
 
 //3. 定义结构体
@@ -89,18 +90,128 @@ message Person{
 
 
 
+- 定义嵌套对象
+
+```protobuf
+syntax = "proto3";
+package pb;
+//定义person对象
+message Person{
+	string Name = 1;
+	int32 Age = 2;
+	//仅内部能调用,外部不能调用
+  message PhoneNumer{
+        string iphone =1;
+        int32 iphoneType =2;
+    }
+    //调用学生对象
+    Student student = 1;
+}
+//定义学生对象
+message Student {
+	string School
+  int32 Score
+}
+```
+
+
+
+- ==定义数组==
+
+```protobuf
+message Person{
+	string Name = 1;
+	int32 Age = 2;
+	//定义数组
+	repeated PhoneNumer phones =3;
+}
+```
+
+
+
+- 枚举
+
+```protobuf
+//定义枚举
+enum PhoneType {
+	APPle = 0;	//枚举第一个必须是0
+	HTC  = 1;
+	HuaWei = 2;
+}
+```
+
+
+
+- oneof 
+
+```protobuf
+//编号顺序向下
+oneof data {
+	string school = 4;
+	int32 score =5;
+}
+```
+
+
+
+- End
+
+```protobuf
+syntax = "proto3";
+
+package pb; //生成go 语言的包名
+
+//定义一个结构
+message Person{
+    //定义字段
+    string Name = 1;//每个字段必须有编号
+    //年龄
+    int32 Age = 2;  //注意=号后面空格
+
+    //定义内部结构，仅供内部调用
+    message PhoneNumer{
+        string Iphone =1;
+        int32 Type =2;
+        PhoneType phoneType  = 3;
+    }
+
+    PhoneNumer phone=3;
+
+    //定义一个数组
+    repeated PhoneNumer phones =4;
+
+    //oneof
+    oneof data {
+        string school = 5;
+        int32 score =6;
+    }
+}
+
+enum PhoneType {
+    APPle = 0;	//枚举第一个必须是0
+    HTC  = 1;
+    HuaWei = 2;
+}
+```
+
+
+
 ## ==6.protoc编译==
 
 ```shell
 # go_out 输出
 # 第一个. 当前文件目录下
 # 第二个*.proto 编译所有的.proto文件
-$ protoc --go_out=. *.proto
+
+#!/bin/sh
+protoc --go_out=. *.proto
 ```
 
 
 
 ## ==7.序列化与反序列化==
+
+- 简单结构体
 
 ```go
 /* 定义结构体 */
@@ -127,4 +238,171 @@ fmt.Println("Name:",stu.Name,",Age:",stu.Age)
 ```
 
 
+
+- 数组序列化
+
+```go
+lisa := pb.Person{
+		Name: "lisa",
+		Age:  20,
+		Phone: &pb.Person_PhoneNumer{
+			Iphone:     "911",
+			IphoneType: 2,
+		},
+		Phones: []*pb.Person_PhoneNumer{
+			&pb.Person_PhoneNumer{
+				Iphone:     "110",
+				IphoneType: 1,
+			},
+			&pb.Person_PhoneNumer{
+				Iphone:     "120",
+				IphoneType: 2,
+			},
+			&pb.Person_PhoneNumer{
+				Iphone:     "119",
+				IphoneType: 3,
+			},
+		},
+	}
+
+	data, err := proto.Marshal(&lisa)
+	if err != nil {
+		fmt.Println("Marshal err", err)
+		return
+	}
+
+	var stu pb.Person
+	err = proto.Unmarshal(data, &stu)
+	if err != nil {
+		fmt.Println("Unmarshal err", err)
+		return
+	}
+	fmt.Println("Name:", stu.GetName(), ",Age:", stu.GetAge(),"phones:",stu.GetPhones(),"phone:",stu.GetPhone())
+```
+
+- 枚举与oneof
+
+```go 
+	lisa := pb.Person{
+		Name: "lisa",
+		Age:  20,
+		Phone: &pb.Person_PhoneNumer{
+			Iphone:     "911",
+			Type: 2,
+			PhoneType:pb.PhoneType_APPle,
+		},
+		Phones: []*pb.Person_PhoneNumer{
+			&pb.Person_PhoneNumer{
+				Iphone:     "110",
+				Type: 1,
+				PhoneType:pb.PhoneType_APPle,
+			},
+			&pb.Person_PhoneNumer{
+				Iphone:     "120",
+				Type: 2,
+				PhoneType:pb.PhoneType_HTC,
+			},
+			&pb.Person_PhoneNumer{
+				Iphone:     "119",
+				Type: 3,
+				PhoneType:pb.PhoneType_HTC,
+			},
+		},
+		Data:&pb.Person_School{
+			"华强北大学",
+		},
+	}
+
+	data, err := proto.Marshal(&lisa)
+	if err != nil {
+		fmt.Println("Marshal err", err)
+		return
+	}
+
+	var stu pb.Person
+	err = proto.Unmarshal(data, &stu)
+	if err != nil {
+		fmt.Println("Unmarshal err", err)
+		return
+	}
+	fmt.Println("Name:", stu.GetName(), ",Age:", stu.GetAge(),"phones:",stu.GetPhones(),"phone:",stu.GetPhone(),lisa.GetSchool())
+```
+
+
+
+## 8.扩展知识 go语言枚举定义和使用
+
+```go
+//定义枚举
+type PhoneType int32
+
+const (
+	PhoneType_APPle  PhoneType = 0
+	PhoneType_HTC    PhoneType = 1
+	PhoneType_HuaWei PhoneType = 2
+)
+
+type IPhone struct{
+  	PhoneType   PhoneType  //定义枚举
+}
+
+//测试 
+func main() {
+	iphone := IPhone{
+		PhoneType:PhoneType_HTC,
+	}
+	fmt.Println(iphone)
+}
+```
+
+
+
+## 9.go语言oneof的实现
+
+```go
+//定义接口
+type isPerson_Data interface {
+	isPerson_Data()
+}
+//定义结构体
+type Person struct {
+  Data     isPerson_Data
+}
+
+type Person_School struct {
+	School string 
+}
+
+type Person_Score struct {
+	Score int32 
+}
+
+//实现接口
+func (*Person_School) isPerson_Data() {}
+
+func (*Person_Score) isPerson_Data() {}
+
+//方式一调用
+func (m *Person) GetData() isPerson_Data {
+	if m != nil {
+		return m.Data
+	}
+	return nil
+}
+
+//方式二调用
+func (m *Person) GetSchool() string {
+	if x, ok := m.GetData().(*Person_School); ok {
+		return x.School
+	}
+	return ""
+}
+
+func (m *Person) GetScore() int32 {
+	if x, ok := m.GetData().(*Person_Score); ok {
+		return x.Score
+	}
+	return 0
+}
+```
 
