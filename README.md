@@ -71,6 +71,7 @@
 4. [**golang -protoc安装及使用**](https://github.com/shumintao/conf/blob/master/protoc%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8.md)
 5. [**golang-chan**]()
 6. [**golang-多态和接口**](https://github.com/shumintao/conf/blob/master/Go%E8%AF%AD%E8%A8%80%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%A4%9A%E6%80%81.md)
+7. [**Beego Orm操作**]()
 
 ## Liunx
 
