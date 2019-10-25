@@ -17,7 +17,7 @@
 ---
 ## Golang环境配置
 1. [**Goland安装及环境配置**](https://github.com/shumintao/conf/blob/master/Goland%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.md)
-2. [**Go Modules配置**]()
+2. [**Go Modules配置**](https://github.com/shumintao/conf/blob/master/GoModules%E9%85%8D%E7%BD%AE.md)
 
 ## 高级知识点
 
