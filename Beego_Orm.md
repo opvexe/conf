@@ -53,12 +53,65 @@ var article Article
 article.Id = id
 //3.读取
 o.Read(&article,"Id")
-//4.多对多关联 
+//4.多对多关联 加载关系表
 o.LoadRelated(&article,"Users")
 //5.多对多User表去重
 //mysql去重distinct
 //.Filter("Articles__Article__Id",id) 多对多查询 Articles__ 1对多查询不需要
 // select *from user where Article.id = id 
 o.QueryTable("User").Filter("Articles__Article__Id",id).Distinct().All(&usrs)
+```
+
+
+
+## 关联视图函数
+
+- main.go
+
+```go
+func main() {
+  //关联视图函数
+	beego.AddFuncMap("shangyiye",PrePage)
+	beego.Run()
+}
+
+//	关联视图函数
+//  参数1：传入当前页码
+func PrePage(pageIndex int)int{
+  if pageIndex == 1{
+    retrun 1
+  }
+  retrun pageIndex -1 
+}
+```
+
+- html 文件
+
+```html
+<- .pageIndex 与main.go 文件的 关联函数保持一致 ->
+<li><a href="/article/index?pageIndex={{shangyiye .pageIndex}}">上一页 </a> </li>
+```
+
+
+
+- dateformat 时间格式转换
+
+```html
+1.实现了时间的格式化，返回字符串，
+
+//案例：
+ <td> {{$value.AddTime.Format "2006-01-02 15:04:05"}}</td>
+```
+
+
+
+- compare
+
+```html
+1.实现了比较两个对象的比较，如果相同返回true，否者false，
+使用方法
+{{compare .A .B}}
+
+<option {{if compare .ArticleName $.typeName}}selected="true"{{end}}>{{.ArticleName}}</option>
 ```
 
