@@ -53,7 +53,7 @@ var article Article
 article.Id = id
 //3.读取
 o.Read(&article,"Id")
-//4.多对多关联
+//4.多对多关联 
 o.LoadRelated(&article,"Users")
 //5.多对多User表去重
 //mysql去重distinct
