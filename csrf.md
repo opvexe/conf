@@ -1,4 +1,4 @@
-# CSRF---ujhjkh 
+# CSRF
 [**文章链接**](https://studygolang.com/articles/9925)
 
 - `CSRF`全拼为`Cross Site Request Forgery`，译为跨站请求伪造。
