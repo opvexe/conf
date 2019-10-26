@@ -53,7 +53,7 @@ var article Article
 article.Id = id
 //3.读取
 o.Read(&article,"Id")
-//4.多对多关联 加载关系表
+//4.多对多关联 加载关系表 
 o.LoadRelated(&article,"Users")
 //5.多对多User表去重
 //mysql去重distinct
@@ -113,5 +113,44 @@ func PrePage(pageIndex int)int{
 {{compare .A .B}}
 
 <option {{if compare .ArticleName $.typeName}}selected="true"{{end}}>{{.ArticleName}}</option>
+```
+
+
+
+## 数据库增加收货地址
+
+```go
+/*
+	增加收货地址
+*/
+func AddAddress(revicer,detail,zipcode,iphone,userName string)  {
+	o := orm.NewOrm()
+	var usr User
+	usr.Name = userName
+	o.Read(&usr,"Name")
+	var address Address
+  //查询当前用户默认地址
+  err:=o.QueryTable("Address").RelatedSel("User").Filter("User_Name",userName).Filter("IsDefault",1).One(&address)
+	if err!=nil {
+		address.Receiver =revicer
+		address.Addr = detail
+		address.Phone = iphone
+		address.Isdefault = 1
+		address.User = &usr
+		o.Insert(&address)
+	}else {
+    //将原来的默认地址更新为非默认地址
+		address.Isdefault = 0
+		o.Update(&address,"IsDefault")
+    //增加新地址
+		var newAddress Address
+		newAddress.Receiver =revicer
+		newAddress.Addr = detail
+		newAddress.Phone = iphone
+		newAddress.Isdefault = 1
+		newAddress.User = &usr
+		o.Insert(&newAddress)
+	}
+}
 ```
 
