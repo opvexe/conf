@@ -199,7 +199,37 @@ $ curl http://127.0.0.1:2379/v2/keys/foo?prevValue=two -XDELEFE
 
 ```shell
 # 生成
-$ ./etcdctl lease grant 300
-lease
+$ ./etcdctl lease grant 20
+# 执行后返回信息:
+# lease 2be754fbc6a5afa granted with TTL(20s)
+
+# 关联租约到key 
+$ ./etcdctl put test_lease 20 --lease=2be754fbc6a5afa
+
+# 维持租约
+$ ./etcdctl lease keep-alive 2be754fbc6a5afa
+
+# 撤销租约
+$ ./etcdctl lease revoke 2be754fbc6a5afa
+```
+
+
+
+## 5.观察者
+
+==观察者: 事件的接收者==
+
+```shell
+# 终端输入：
+$ curl http://127.0.0.1:2379/v2/keys/foo?wait=true
+# 该终端进入等待返回状态
+
+# 第二个终端去改变他的值
+$ curl http://127.0.0.1:2379/v2/keys/foo -XPUT -d value=bar
+
+# 然后返回第一个终端观察变化
+# 等待指定的index ,这个index 是node 属性中的modifiedIndex
+# waitIndex=14 意识是: 修改次数内createIndex= 14次时变化
+$ curl 'http://127.0.0.1:2379/v2/keys/foo?wait=true&waitIndex=14'
 ```
 
