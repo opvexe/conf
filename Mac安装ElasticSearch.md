@@ -12,7 +12,7 @@
 
 Elasticsearch 是一款稳定高效的分布式搜索和分析引擎，它的底层基于 Lucene，并提供了友好的 RESTful API 来对数据进行操作，还有比较重要的一点是， Elasticsearch 开箱即可用，上手也比较容易。
 
-```
+```shell
 1.docker 搜索镜像
 docker search elasticsearch
 
@@ -55,7 +55,7 @@ curl -XGET 'localhost:9200/_cat/indices?v&pretty'
 [参考文献资料](https://blog.csdn.net/fw19940314/article/details/86482971)
 ##### 1.1 修改跨域问题
 
-```
+```shell
 1.进入容器
 docker exec -it b8c7c128df2f /bin/bash
 
@@ -82,7 +82,7 @@ service docker restart
 
 [参考文档](https://blog.csdn.net/sinat_28434649/article/details/79285831)
 
-```
+```shell
 1..镜像拉取
 docker pull mobz/elasticsearch-head:5
 
@@ -97,7 +97,7 @@ Started connect web server on http://localhost:9100
 
 ### 1.3docker容器关闭异常处理
 
-```
+```shell
 1.查看进程
 	docker  ps  - a 
 2.杀死没用，删除
@@ -109,7 +109,7 @@ Started connect web server on http://localhost:9100
 ### 1.4安装Kibana 6.8.3版本
 >Kibana是ES的一个配套工具，让用户在网页中可以直接与ES进行交互。 Kibana的默认端口是5601
 
-```
+```shell
 1.安装
 brew install kibana
 2.启动
@@ -130,7 +130,7 @@ $ port install httpie
 
 对应关系:
 
-```
+```shell
 Mysql:
 databases --> tables -->row ----> columns
 
@@ -149,7 +149,7 @@ indexs ---> Types ----> Document---->Fields(域)
 
 1.创建索引库
 
-```
+```json
 PUT:		
 	http://127.0.0.1:9200/blog1
 	
@@ -177,9 +177,7 @@ PUT:
 			}
 		}
 	}
-	
 }
-
 ```
 
 2.设置mappings 
@@ -187,7 +185,7 @@ PUT:
 POST:		
 	http://127.0.0.1:9200/blog1(索引名称)/hello(相当于表名)_mappings(执行动作)
 
-```
+```json
 "hello":{			
 		"article":{			
 		"properties":{		
@@ -219,7 +217,7 @@ POST:
 DELETE:
 	http://127.0.0.1:9200/blog1
 	
-```
+```json
 "mappings":{			
 		"article":{			
 		"properties":{		
@@ -251,7 +249,7 @@ DELETE:
 POST:		
 	http://127.0.0.1:9200/blog1/hello/1   (解释：blog数据库名，hello 表名,1 文档Document 对应row)
 
-```
+```json
 {
 	"id":1
 	"title":新添加文档
@@ -262,7 +260,7 @@ POST:
 
 返回数据解析:
 
-```
+```json
 {
 	"_index":"blog1",
 	"_type":hello,
@@ -298,7 +296,7 @@ POST
 http://127.0.0.1:9200/blog1/hello/1 
 
 
-```
+```json
 {
 	"id":1,
 	"title":"修改文档1",			//本质是先删除都添加
