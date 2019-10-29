@@ -233,3 +233,85 @@ $ curl http://127.0.0.1:2379/v2/keys/foo -XPUT -d value=bar
 $ curl 'http://127.0.0.1:2379/v2/keys/foo?wait=true&waitIndex=14'
 ```
 
+## 6.高级用法
+
+### 6.1 原子操作
+
+```shell
+# 当条件成立时设置key 值
+$ curl http://127.0.0.1:2379/v2/keys/foo?prevExist=false -XPUT -d value=three
+# 支持判断条件：prevExist，prevValue，prevIndex
+
+$ curl http://127.0.0.1:2379/v2/keys/foo?prevValue=bar -XPUT -d value=three
+$ curl http://127.0.0.1:2379/v2/keys/foo?prevIndex=38 -XPUT -d value=three
+
+# 当条件成立时删除key
+$ curl http://127.0.0.1:2379/v2/keys/foo?prevValue=bar -XDELETE
+# 支持判断条件：prevValue，prevIndex
+```
+- 原子操作效果图
+
+![截屏2019-10-29下午7.33.06](截屏2019-10-29下午7.33.06.png)
+
+
+
+### 6.2 事务
+
+```shell
+$ ./etcdctl txn --interactive
+compares:
+value("foo") = "bar" # 如果事务foo的值等于bar
+
+# 如果成功干什么
+sucess requests (get,put,del):
+get foo  # 获取foo
+
+# 如果失败干什么
+failure requests (get,put,del):
+put foo bar  #设置foo等于bar
+
+# 查看结果
+$  ./etcdctl get foo
+```
+
+- 事务操作效果图
+
+![截屏2019-10-29下午7.41.29](截屏2019-10-29下午7.41.29.png)
+
+
+
+### 6.2 分布式锁
+
+- 时间先后顺序上等待
+
+```shell
+# 第一个终端:
+$  ./etcdctl lock my_mutex1
+# 返回结果
+# my_mutex1/25f1669a0cd36184
+
+# 第二个终端:
+$  ./etcdctl lock my_mutex1
+# 会等待进入，直到第一个终端的锁被释放 
+
+# 注意ctr+c 释放锁
+```
+
+### 6.3选举
+
+- 集群里选举主从，谁胜出谁是leader
+
+```shell
+# 第一个终端：
+$ ./etcdctl elect my_server p1
+# 返回
+my_server/25f1669a0cd36184
+p1
+
+# 第二个终端:
+$ ./etcdctl elect my_server p2
+# 会等待，此时在第一个终端ctr+c ,第二个终端进入并显示
+my_server/25f16622223333
+p2
+```
+
