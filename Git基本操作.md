@@ -171,7 +171,7 @@ $ git log -p  ** 常用
 
 
 
-## 4. 暂时保存工作区
+## 4. 暂时保存工作区(stash)
 
 ```shell
 $ git stash 		# 将当前工作区进行贮藏
@@ -209,7 +209,8 @@ $ git diff 版本号A 版本号B -- 所有文件名			# 两个版本号的文件
 #### 7.1 查看分支
 
 ```shell
-$ git branch
+$ git branch  # 查看本地分支
+$ git branch -a #查看远程分支
 ```
 
 #### 7.2 创建分支
@@ -219,6 +220,9 @@ $ git branch dev 		# 创建分支
 $ git checkout dev 		# 切换分支
 或
 $ git checkout -b dev		# -b表示创建并切换分支 <<===推荐使用
+
+# 基于节点创建分支
+$ git checkout -b dev	 <节点哈希值>
 ```
 
 #### 7.3 合并分支
@@ -229,6 +233,7 @@ $ git merge sm/dev #合并分支
 
 # 查看已经提交的内容
 $ git log -p # <<<<===推荐使用
+ git log --graph  # <<== 图形显示
 ```
 
 #### 7.4 删除分支
@@ -236,7 +241,21 @@ $ git log -p # <<<<===推荐使用
 ```shell
 $ git branch -d dev  # 删除分支
 $ git branch -D dev  # 强制删除未修改提交的分支
+
+$ git push origin :duke/dev1 # 删除远程分支（推送一个空分支到远程分支，其实就相当于删除远程分支）
+或
+$ git push origin delete duke/dev
 ```
+#### 7.5.创建远程分支
+
+```shell
+# 基于本地分支创建远程分支
+$ git push origin duke/dev:duke/dev1  # dev本地分支，dev1远程分支
+
+# 基于远程分支创建本地分支
+$ git checkout 
+```
+
 
 ## 8.删除文件
 
@@ -248,9 +267,106 @@ $ git rm gitTest.exe
 
 
 
-## Tag节点创建
 
-## 
+## 9.解决冲突
+
+#### 9.1 合并后有冲突(取消本次合并)
+
+```shell
+$ git merge --abort  # 取消本次合并
+```
+
+#### 9.2 恢复冲突至原本冲突状态
+
+```shell
+$ git merge --abort
+$ git merge b/dev  #恢复冲突至原本冲突状态  
+```
+
+####  9.3 合并错误后(已commit)，恢复到合并前
+
+```shell
+$ git reset --hard 45c90469ce2c78eb79332b07587405674ea51fc3
+$ git git merge sm/dev
+```
+
+####  ==9.4 rebase 合并推荐使用== 
+
+- 合并分支无冲突
+
+```shell
+$ git checkout master  # 切换主分支
+$ git rebase duke/dev  # 将duke分支合并到主分支
+$ git push -u origin master 
+```
+
+- 合并后有冲突(恢复冲突至原本冲突状态)
+
+```shell
+$ git rebase --abort
+```
+
+
+
+#### 10.查看某个节点的提交记录代码
+
+```shell
+$ git checkout <节点哈希值> #相当于soucetree 里的双击某个提交记录
+```
+
+
+
+#### 11.==reflog== 查看所有分支的所有操作记录
+
+- ==（包括已经被删除的 commit 记录和 reset 的操作）==
+
+```shell
+$ git reflog 
+```
+
+
+
+
+## SSH登录
+
+```shell
+$ ssh -keygen -t rsa -C "account email"  # 一直按回车就OK
+cat id_rsa.pub        ->查看公有密钥，全部复制，添加到github中 公钥一般给leader
+# 注意:
+	1.git 地址是ssh 而不是http
+```
+
+## tag
+
+```shell
+$ git tag -a v1.2 9fceb02 -m "my tag" # 给指定的某个commit号加tag
+$ git push origin v1.0
+或
+推送本地所有tag，使用git push origin --tags
+
+$ git tag -d v0.1.2  # 删除
+$ git tag v0.1.2 #切换
+```
+
+
+
+
+
+
+## 案例
+
+```shell
+$ git remote -v # 查看远程仓库地址
+$ git pull 	# 拉取合并操作
+或者
+$ git fetch origin duke/mod:duke/mod #<<<=== 推荐使用（只是拉取没有合并） 拉取远程分支
+
+$ git rebase duke/mod # 合并
+$ git push -u origin master 
+```
+
+
+
 
 
 
