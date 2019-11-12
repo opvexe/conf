@@ -110,6 +110,7 @@
 
 1. [**Git环境搭建及操作--个人总结**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
 2. [**Git环境搭建及操作--全面总结**](https://github.com/shumintao/conf/blob/master/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
+3. [**Git环境搭建及操作--教师版本**](https://github.com/shumintao/conf/blob/master/git%E6%95%99%E5%B8%88%E7%89%88/02-%E8%B5%84%E6%96%99/git%E4%BB%8B%E7%BB%8D.md)
 ---
 
 ## Go语言文献资料
