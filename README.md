@@ -32,16 +32,15 @@
 9. [**ElasticSearch使用文档**](https://github.com/shumintao/conf/blob/master/ElasticSearch%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md)
 10. [**安装ElasticSearch**](https://github.com/shumintao/conf/blob/master/Mac%E5%AE%89%E8%A3%85ElasticSearch.md)
 11. [**Etcd安装与使用**]([https://github.com/shumintao/conf/blob/master/Etcd%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8.md](https://github.com/shumintao/conf/blob/master/Etcd安装与使用.md))
+12. [**Zookeeper**]()
 
 ---
 
 ## 加密比特币，区块链
 
 [**加密学 - 01**]()
-
-[**比特币 - 02**]()
-
 [**HTTPS -03**]()
+[**比特币 - 03**]()
 
 
 
@@ -85,6 +84,9 @@
 5. [**golang-chan**]()
 6. [**golang-多态和接口**](https://github.com/shumintao/conf/blob/master/Go%E8%AF%AD%E8%A8%80%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%A4%9A%E6%80%81.md)
 7. [**Beego Orm操作**](https://github.com/shumintao/conf/blob/master/Beego_Orm.md)
+8. [**golang -Context**]()
+9. [**makefile**]()
+10. [**flag包**]()
 
 ## Liunx
 
