@@ -32,7 +32,7 @@
 9. [**ElasticSearch使用文档**](https://github.com/shumintao/conf/blob/master/ElasticSearch%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md)
 10. [**安装ElasticSearch**](https://github.com/shumintao/conf/blob/master/Mac%E5%AE%89%E8%A3%85ElasticSearch.md)
 11. [**Etcd安装与使用**]([https://github.com/shumintao/conf/blob/master/Etcd%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8.md](https://github.com/shumintao/conf/blob/master/Etcd安装与使用.md))
-12. [**Zookeeper**]()
+12. [**Zookeeper**](https://github.com/shumintao/conf/blob/master/ZooKeeper.md)
 
 ---
 
@@ -84,9 +84,10 @@
 5. [**golang-chan**]()
 6. [**golang-多态和接口**](https://github.com/shumintao/conf/blob/master/Go%E8%AF%AD%E8%A8%80%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%A4%9A%E6%80%81.md)
 7. [**Beego Orm操作**](https://github.com/shumintao/conf/blob/master/Beego_Orm.md)
-8. [**golang -Context**]()
-9. [**makefile**]()
-10. [**flag包**]()
+8. [**golang -Context**]([https://github.com/shumintao/conf/blob/master/makefile/02-%E8%B5%84%E6%96%99/context%E5%8C%85.md](https://github.com/shumintao/conf/blob/master/makefile/02-资料/context包.md))
+9. [**makefile -1**](https://github.com/shumintao/conf/blob/master/Makefile.md)
+10. [**makefile -2**]()
+11. [**flag包**]([https://github.com/shumintao/conf/blob/master/makefile/02-%E8%B5%84%E6%96%99/flag.md](https://github.com/shumintao/conf/blob/master/makefile/02-资料/flag.md))
 
 ## Liunx
 
