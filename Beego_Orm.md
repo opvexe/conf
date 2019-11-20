@@ -53,7 +53,7 @@ var article Article
 article.Id = id
 //3.读取
 o.Read(&article,"Id")
-//4.多对多关联 加载关系表 
+//4.多对多关联 加载关系表
 o.LoadRelated(&article,"Users")
 //5.多对多User表去重
 //mysql去重distinct
@@ -172,6 +172,7 @@ func AddAddress(revicer,detail,zipcode,iphone,userName string)  {
     - 会出现==幻读==
 
 - 串行化： 
+  
   - 一个一个处理。串行 -- 安全性最高
 
 ```shell
